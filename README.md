@@ -11,10 +11,9 @@
 Technical test for Web Developer job at Aurum.
 
 
-## 🚀 Quick start
+## Quick start
 
 1.  **Clone this repository**
-
 
     ```shell
     git clone https://github.com/Gpriees/aurum-blog.git
@@ -22,25 +21,27 @@ Technical test for Web Developer job at Aurum.
 
     or using SSH key
 
-        ```shell
+    ```shell
     git clone git@github.com:Gpriees/aurum-blog.git
     ```
 
-1.  **Install all dependencies**
+
+2.  **Install all dependencies**
 
     ```shell
     cd aurum-blog/
     npm install
     ```
 
-  1.  **Start developing**
+
+3.  **Start developing**
+
+    ```shell
+    gatsby develop
+    ```
 
 
-  ```shell
-  gatsby develop
-  ```
-
-1.  **Open the source code and start editing!**
+4.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 
