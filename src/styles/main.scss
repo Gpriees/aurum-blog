@@ -1,0 +1,139 @@
+@import "variables";
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100Vh;
+  background-color: $bg-color-default;
+}
+
+header {
+  @include flex;
+  width: 100%;
+  background-color: $bg-color-contrast;
+
+  h1 {
+    display: none;
+  }
+}
+
+nav {
+  @include flex(center, space-between);
+  width: 100%;
+  max-width: 850px;
+  height: 60px;
+  margin: 0 16px;
+
+  ul {
+    @include flex(center, left);
+    width: 80%;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  a.tagFilter {
+    width: 20%;
+  }
+  
+  li {
+    height: inherit;
+    margin-right: 25px;
+  }
+
+  a {
+    @include flex;
+    height: inherit;
+    padding: 0 5px;
+    box-sizing: border-box;
+    color: $text-color-default;
+    border-bottom: 3px solid transparent;
+
+    svg g {
+      fill: $text-color-default;
+    }
+
+    &:hover,
+    &:active,
+    &.isActive {
+      color: $text-color-contrast;
+      border-bottom: 3px solid $text-color-contrast;
+  
+      svg g {
+        fill: $text-color-contrast;
+      }
+    }
+
+    i {
+      display: inherit;
+      margin-right: 8px;
+      font-style: normal;
+
+      svg {
+        max-width: 16px;
+        height: auto;
+      }
+    }
+  }
+}
+
+main {
+  @include flex;
+  width: 100%;
+}
+
+section.container {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 16px;
+}
+
+.card {
+  position: relative;
+  @include flex(flex-start, left);
+  flex-flow: column;
+  height: 15em;
+  padding: 3em 3em 3em 40%;
+  margin: 80px 0 30px 0;
+  background: $bg-color-contrast;
+  color: $text-color-default;
+
+  h2 {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  p {
+    min-height: 110px;
+    font-weight: 300;
+  }
+
+  a.show-more {
+    @include flex(center, left);
+    color: $text-color-contrast;
+
+    i {
+      display: inherit;
+      margin-right: 8px;
+      font-style: normal;
+  
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 35%;
+    min-height: 100%;
+    max-height: 115%;
+    width: auto;
+  }
+}
+
+@import "responsive";

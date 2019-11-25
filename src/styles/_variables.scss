@@ -1,0 +1,28 @@
+// Background: #0F1018, #15182F (gradiente)
+
+// Tipografia
+// Fonte: https://fonts.google.com/specimen/Open+Sans
+// Pesos: 300, 400
+// Tamanhos: 16px, 20px, 28px
+// Cores: #868797, #1C1E2F, #585969
+
+$c01: #868797;
+$c02: #1C1E2F;
+$c03: #585969;
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap');
+
+
+$text-color-default: #6c6c6c;
+$text-color-contrast: #008fd5;
+
+$bg-color-default: #f7f6fa;
+$bg-color-contrast: #ffffff;
+
+
+@mixin flex($aling: center, $justify: center) {
+    display: flex;
+    align-items: $aling;
+    justify-content: $justify;
+}

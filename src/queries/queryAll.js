@@ -2,27 +2,56 @@
 
 module.exports = `
     {
+        allWordpressPost {
+            edges {
+                node {
+                    id
+                    wordpress_id
+                    title
+                    slug
+                    content
+                    acf {
+                        assunto
+                    }
+                    tags {
+                        name
+                        slug
+                    }
+                    categories {
+                        slug
+                        id
+                        name
+                        wordpress_id
+                    }
+                    author {
+                        slug
+                        name
+                    }
+                }
+            }
+        }
+        allWordpressCategory {
+            totalCount
+            edges {
+                node {
+                    name
+                    slug
+                    wordpress_id
+                    count
+                }
+            }
+        }
         allWordpressPage {
             edges {
                 node {
                     id
-                    slug
-                    status
-                    template
-                }
-            }
-        }
-        
-        allWordpressPost {
-            edges {
-                node {
-                    id  
-                    slug
-                    status
-                    template
-                    format
+                    wordpress_id
                     title
-                    date
+                    acf {
+                        pageCategory
+                        menuName
+                        menuIcon
+                    }
                 }
             }
         }

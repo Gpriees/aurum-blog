@@ -1,0 +1,89 @@
+
+@media (max-width: 768px) {
+
+  header {
+    justify-content: left;
+
+    h1 {
+      display: block;
+      margin-left: 32px;
+      color: $text-color-default;
+      font-weight: 600;
+    }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      margin: 0;
+      background-color: $bg-color-contrast;
+      box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+
+  }
+  nav {
+    ul {
+      width: 100%;
+      @include flex (center, space-around);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      flex-grow: 1;
+      margin: 0;
+
+      a {
+        width: auto;
+        padding: 0;
+      }
+
+      i {
+        margin: 0;
+
+        svg {
+          max-width: none;
+          width: 24px;
+        }
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  section.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 3px;
+    margin: 0 0 70px;
+
+    .card {
+      display: block;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      text-align: center;
+
+      h2, p, a.show-more {
+        display: none;
+      }
+  
+      img {
+        position: relative;
+        width: auto;
+        max-width: 100%;
+        min-height: auto;
+        max-height: none;
+        height: auto;
+      }
+    }
+  }
+}
